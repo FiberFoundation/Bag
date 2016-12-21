@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "es2015",
+    "es2016",
+    "es2017"
+  ],
+  "plugins": [
+    "lodash",
+    "transform-strict-mode",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-export-extensions"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-remove-console",
+        "transform-remove-debugger"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "fiber.bag",
+  "version": "0.0.1",
+  "description": "Fiber Bag",
+  "engines": {
+    "npm": ">=6"
+  },
+  "scripts": {
+    "preinstall": "node tools/preInstall.js",
+    "prestart": "npm run remove-dist",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist",
+    "prebuild": "npm run clean-dist",
+    "build": "babel ./src --out-dir ./dist"
+  },
+  "author": "Igor Krimerman",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "6.14.0",
+    "babel-loader": "6.2.5",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-class-properties": "6.16.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-export-extensions": "6.8.0",
+    "babel-plugin-transform-object-rest-spread": "6.16.0",
+    "babel-plugin-transform-remove-console": "6.8.0",
+    "babel-plugin-transform-remove-debugger": "6.8.0",
+    "babel-plugin-transform-strict-mode": "6.11.3",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-es2016": "6.16.0",
+    "babel-preset-es2017": "6.16.0",
+    "babel-register": "6.14.0",
+    "rimraf": "2.5.4",
+    "webpack": "1.13.2"
+  },
+  "keywords": [
+    "Bag",
+    "Object",
+    "Container",
+    "Fiber"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FiberFoundation/Bag.git"
+  }
+}
